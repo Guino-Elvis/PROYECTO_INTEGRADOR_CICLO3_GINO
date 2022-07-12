@@ -74,7 +74,7 @@ router.get('/mainmodeG', function(req, res, next) {
   res.render('mainmodeG');
 });
 
-module.exports = router; */
+module.exports = router; /*
 
 
 
@@ -190,6 +190,6 @@ router.get('/clientes', function(req, res, next) {
           res.render('clientes/list',{data:rows});
       }
   });
-});
+}); 
 
 module.exports = router;
