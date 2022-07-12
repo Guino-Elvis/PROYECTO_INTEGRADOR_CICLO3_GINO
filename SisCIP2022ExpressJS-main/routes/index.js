@@ -2,96 +2,7 @@ var express = require('express');
 var router = express.Router();
 var dbConn  = require('../lib/db');
 
-/* GET home page 1. 
-router.get('/', function(req, res, next) {
-  res.render('indexG', { title: 'Express' });
-});
-
-router.get('/loginG', function(req, res, next) {
-  res.render('loginG');
-});
-router.get('/registroG', function(req, res, next) {
-  res.render('registroG');
-});
-
-router.get('/registroexitosoG', function(req, res, next) {
-  res.render('registroexitosoG');
-});
-
-router.post('/mainmodeG', function(req, res, next) {
-  email=req.body.email;
-  password=req.body.password;
-  console.log(email);
-  dbConn.query("SELECT * FROM usuarios WHERE email='"+email+"' AND password='"+password+"'",function(err,rows){
-    if(err){
-      req.flash('error',err);
-      console.log(err);
-    }else{
-      if(rows.length){
-        console.log(rows);
-        req.session.idu=rows[0]["id"];
-        req.session.email=rows[0]["email"];
-        req.session.loggedin = true;
-        res.redirect('/main');
-      }else{
-        req.flash('error','El usuario no existe...');
-        res.redirect('/loginG');
-      }
-    }
-  });
-
-  
-});
-
-router.get('/main', function(req, res, next) {
-  //if(!req.session.loggedin){
-  //  res.redirect('/login');
-  //}else{
-    res.locals.idu=req.session.idu;
-    res.locals.email=req.session.email;
-    res.locals.loggedin=req.session.loggedin;
-
-    var queries = [
-     "SELECT COUNT(idx) as cantidad FROM clientes",
-     "SELECT SUM(saldo) as total FROM clientes"
-   ];
-   
-    //dbConn.query('SELECT SUM(saldo) as total FROM clientes',function(err,rows) {
-    dbConn.query(queries.join(';'),function(err,rows) {
-     //console.log(rows[0].total);
-     if(err) throw err;
-     //console.log(rows[0][0].cantidad);
-     res.render('mainmodeG',{dataCantidad:rows[0][0].cantidad,dataSaldo:rows[1][0].total});
-    });
-    
-  //}
-});
-
-
-
-
-router.get('/mainmodeG', function(req, res, next) {
-  res.render('mainmodeG');
-});
-
-module.exports = router; /*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* GET home page 2. */
+/* GET home page. 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -99,8 +10,6 @@ router.get('/', function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
-
-
 
 router.post('/dashboard', function(req, res, next) {
   email=req.body.email;
@@ -190,6 +99,25 @@ router.get('/clientes', function(req, res, next) {
           res.render('clientes/list',{data:rows});
       }
   });
-}); 
+});*/
+
+
+
+ /* GET home page. 2 */
+/* GET home page. */
+
+router.get('/', function(req, res, next) {
+  res.render('vistaEventos');
+});
+
+
+router.get('/inscripcion', function(req, res, next) {
+  res.render('inscripcion');
+});
+/*
+router.get('/inscripcion', function(req, res, next) {
+  res.render('inscripcion');
+});
+*/
 
 module.exports = router;
