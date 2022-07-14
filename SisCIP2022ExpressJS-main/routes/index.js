@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var dbConn  = require('../lib/db');
 
-/* GET home page. 
+/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -99,25 +99,38 @@ router.get('/clientes', function(req, res, next) {
           res.render('clientes/list',{data:rows});
       }
   });
-});*/
+}); 
 
 
 
  /* GET home page. 2 */
-/* GET home page. */
 
-router.get('/', function(req, res, next) {
-  res.render('vistaEventos');
+
+router.get('/vistaEventos', function(req, res, next) {
+  res.render('inscripcion/ins2');
 });
 
 
 router.get('/inscripcion', function(req, res, next) {
-  res.render('inscripcion');
+  res.render('inscripcion/ins');
+}); 
+
+
+router.get('/ingresarclase', function(req, res, next) {
+  res.render('claseinscrita/clas11');
+}); 
+
+
+
+/* GET home page. 3 */
+
+router.get('/notificaciones', function(req, res, next) {
+  res.render('notifi/not1');
 });
-/*
-router.get('/inscripcion', function(req, res, next) {
-  res.render('inscripcion');
-});
-*/
+
+router.get('/menu', function(req, res, next) {
+  res.render('partials/header');
+}); 
+
 
 module.exports = router;
