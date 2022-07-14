@@ -132,5 +132,10 @@ router.get('/menu', function(req, res, next) {
   res.render('partials/header');
 }); 
 
+/* GET home page. 4 */
+router.get('/perfil', function(req, res, next) {
+  res.render('perfilestudiante/per1');
+}); 
+
 
 module.exports = router;
