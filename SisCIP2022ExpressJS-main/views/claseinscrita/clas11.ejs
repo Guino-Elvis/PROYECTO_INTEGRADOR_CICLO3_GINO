@@ -1,57 +1,91 @@
-<style>
-
-.contenidoo{
-        
-        width:80%;
-        margin:auto;
-        
-        
-    }
-
-    .boboo {
-          border: solid 2px black;
-          background: rgba(0, 0, 0, 0.179) ;
-          border-left: none;
-          border-right: none;
-         
-          
-          
-      }
-
-
-      .otross{
-      margin-top:120px;
-     
-    }
-
-    .botonnn{
-        margin: auto;
-       
-    }
-   
-      
-
-    
-    </style>
 
 <%- include('../partials/header'); %>
-<div class="relative md:ml-64 ">
-    <%- include('../partials/logiud_clase_inscrita'); %> 
 
-     <!-- component -->
-     <div class="contenidoo flex items-center justify-center p-12 ">
-           
-        <div class="otross mx-auto w-full max-w-[600px] ">
-          
-            <div class=" flex justify-center text-blue-600 font-bold subpixel-antialiased text-2xl m-8 ">
+    <%- include('../partials/logout3'); %> 
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>main</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+      </head>
+      <style>
+
+        .contenidoo{
                 
+                width:80%;
+                margin:auto;
+                
+                
+            }
+        
+            .boboo {
+                  border: solid 2px black;
+                  background: rgba(0, 0, 0, 0.179) ;
+                  border-left: none;
+                  border-right: none;
+                 
+                  
+                  
+              }
+        
+        
+             
+        
+            .botonnn{
+                margin: auto;
+               
+            }
+           
+              
+        
+            
+            </style>
+    <body> 
+       <!--encabezado-->
+  <main x-data="{  open: false }">
+    <div class="relative md:ml-64 bg-blueGray-50">
+
+        <div class="relative bg-red-700 md:pt-11 pb-10 pt-10 mx-auto">
+            <h1 class="text-left pt-0 font-bold text-lg p-4 font-size:20vw text-white"><b>Clases Inscritas</b> </h1>  
+    <div class="flex items-center px-6 py-4 overflow-y-auto whitespace-nowrap">
+        <a href="#" class=" text-white dark:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </a>
+
+        <span class="mx-5  text-white dark:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </span>
+
+        <a href="/main" class=" text-white dark:text-gray-200 hover:underline">
+            Home
+        </a>
+        <span class="mx-5  text-white dark:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </span>
+        <a href="#" class="text-slate-300 dark:text-slate-200 hover:underline hover:text-white">
+            Clases
+        </a>
+    </div>
+
+           <!-- component -->
+                    
+                    <div class=' container inline-flex items-start justify-start min-h-screen p-10 ml-20px  from-slate-300 via-slate-400 to-slate-500 bg-gradient-to-br'>
+                        <div class=' container overflow-auto w-full max-w-full px-10 py-8 mx-auto bg-white rounded-lg shadow-zinc-200'>
+      <div class="contenidoo flex  ">          
+        <div class="otross mx-auto ">      
+            <div class=" flex justify-center text-blue-600 font-bold subpixel-antialiased text-2xl m-8 ">                
             </div>
-
-
             <div class="boboo flex m-8 ">
                 <div class="flex-none w-auto h-auto mr-8">
-                    <img src="images/n1.png" width="200px" height="400px" alt="">
-                    
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
                 </div>
                 <div class="flex-initial w-64 ...">
                   <p class=" pt-8 text-center ">  Docente<br>
@@ -59,31 +93,29 @@
                     06/2/2022<br>
                     </p>
                 </div>
-                <div class="botonnn flex-initial w-64 ...">
-                  
-                                    <!-- component -->
-                                        <div class="colorboton pt-12 mb-8 ">
-                                        <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
-                                        </div>
-                                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-                                        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
             
-                                            <!-- Modal header -->
+                    <!-- Modal header -->
                                             
             
-                                            <!-- Modal body -->
-                                            <div class="flex items-center justify-center">
-                                               <img  src="images/zoom.png" width="300px" height="400px" alt="">
-                                            </div>
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
             
-                                            <!-- Modal footer -->
-                                            <div class="px-4 py-2  flex justify-center items-center space-x-4">
-                                                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
-                                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
-                                            </div>
-                                        </div>
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
                                     </div>
-            
                                     <script type="text/javascript">
                                     window.openModal = function(modalId) {
                                     document.getElementById(modalId).style.display = 'block'
@@ -107,23 +139,20 @@
                                     }
                                     };
                                     </script> 
-                </div>
-              </div>
-
-
-
-              <div class="boboo flex m-8 ">
-                <div class="flex-none w-auto h-auto mr-8">
-                    <img src="images/n1.png" width="200px" height="400px" alt="">
-                    
-                </div>
-                <div class="flex-initial w-64 ...">
-                  <p class="pt-8 text-center">  Docente<br>
-                    fisica cuantica<br>
-                    06/2/2022<br>
-                    </p>
-                </div>
-                <div class="botonnn flex-initial w-64 ...">
+                                </div>
+                            </div>
+                            <div class="boboo flex m-8 ">
+                                <div class="flex-none w-auto h-auto mr-8">
+                                    <img src="images/n1.png" width="200px" height="400px" alt="">
+                                    
+                                </div>
+                                <div class="flex-initial w-64 ...">
+                                <p class="pt-8 text-center">  Docente<br>
+                                    fisica cuantica<br>
+                                    06/2/2022<br>
+                                    </p>
+                                </div>
+                                <div class="botonnn flex-initial w-64 ...">
                   
                                     <!-- component -->
                                         <div class="colorboton pt-12 mb-8">
@@ -171,14 +200,11 @@
                                     }
                                     };
                                     </script> 
-                </div>
-              </div>
-                 
-
+                            </div>
+                        </div>
               <div class="boboo flex m-8 ">
                 <div class="flex-none w-auto h-auto mr-8">
-                    <img src="images/n1.png" width="200px" height="400px" alt="">
-                    
+                    <img src="images/n1.png" width="200px" height="400px" alt=""> 
                 </div>
                 <div class="flex-initial w-64 ...">
                   <p class="pt-8 text-center">  Docente<br>
@@ -187,9 +213,8 @@
                     </p>
                 </div>
                 <div class="botonnn flex-initial w-64 ...">
-                  
-                                    <!-- component -->
-                                        <div class="colorboton pt-12 mb-8 ">
+                <!-- component -->
+                            <div class="colorboton pt-12 mb-8 ">
                                         <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
                                         </div>
                                     <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
@@ -301,11 +326,30 @@
               </div>
 
 
+        
+            </div>
+        
+    
+    </div>
+</main>
 
 
-        </div>
-    </div>      
     
-  
-    
+</body>
+</html>
 <%- include('../partials/footer'); %>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+                  

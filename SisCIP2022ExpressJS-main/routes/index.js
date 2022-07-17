@@ -103,7 +103,6 @@ router.get('/clientes', function(req, res, next) {
 
 
 
- /* GET home page. 2 */
 
 
 router.get('/vistaEventos', function(req, res, next) {
@@ -122,7 +121,7 @@ router.get('/ingresarclase', function(req, res, next) {
 
 
 
-/* GET home page. 3 */
+
 
 router.get('/notificaciones', function(req, res, next) {
   res.render('notifi/not1');
@@ -132,7 +131,7 @@ router.get('/menu', function(req, res, next) {
   res.render('partials/header');
 }); 
 
-/* GET home page. 4 */
+
 router.get('/perfil', function(req, res, next) {
   res.render('perfilestudiante/per1');
 }); 
@@ -147,11 +146,22 @@ router.get('/juniorr', function(req, res, next) {
 }); 
 
 
-/* GET home page.5*/ 
+
 router.get('/inicio', function(req, res, next) {
   res.render('inicio/int');
 }); 
 
 
+router.get('/tramites', function(req, res, next) {
+  res.render('loooo/tramiterel');
+});
+
+
+
+
+/*
+router.get('/', function(req, res, next) {
+  res.render('perfil');
+});*/
 
 module.exports = router;

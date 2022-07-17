@@ -1,0 +1,237 @@
+<%- include('../partials/header'); %>
+
+    <%- include('../partials/logout3'); %> 
+
+  <main x-data="{  open: false }">
+
+    <div class="relative md:ml-64 bg-blueGray-50">
+       
+    
+        <div class="relative bg-red-700 md:pt-11 pb-10 pt-10 mx-auto">
+            <h1 class="text-left pt-0 font-bold text-lg p-4 font-size:20vw text-white"><b>Tramites</b> </h1>
+
+            
+    <div class="flex items-center px-6 py-4 overflow-y-auto whitespace-nowrap">
+        <a href="#" class=" text-white dark:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </a>
+
+        <span class="mx-5  text-white dark:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </span>
+
+        <a href="/main" class=" text-white dark:text-gray-200 hover:underline">
+            Home
+        </a>
+
+
+        <span class="mx-5  text-white dark:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </span>
+
+        <a href="#" class="text-slate-300 dark:text-slate-200 hover:underline hover:text-white">
+            Trámites
+        </a>
+    </div>
+
+    
+            <div >  
+    
+                <style>
+                    html,
+                    body {
+                      height: 100%;
+                    }
+                  
+                    @media (min-width: 640px) {
+                      table {
+                        display: inline-table !important;
+                      }
+                  
+                      thead tr:not(:first-child) {
+                        display: none;
+                      }
+                    }
+                  
+                    td:not(:last-child) {
+                      border-bottom: 0;
+                    }
+                  
+                    th:not(:last-child) {
+                      border-bottom: 2px solid rgba(0, 0, 0, .1);
+                    }
+                  </style>
+                  
+           
+                    <style>
+                        .accordion li > div {
+                            display: none;
+                        }
+                    
+                        .accordion .flipY {
+                            transform: rotate3d(1, 0, 0, 180deg);
+                        }
+                    
+                        .accordion svg {
+                            transition: all 1s cubic-bezier(0, .5, 0, 1);
+                        }
+                    </style>
+                    
+                    <div class=' container inline-flex items-start justify-start min-h-screen p-10 ml-20px  from-slate-300 via-slate-400 to-slate-500 bg-gradient-to-br'>
+                        <div class=' container overflow-auto w-full max-w-full px-10 py-8 mx-auto bg-white rounded-lg shadow-zinc-200'>
+    
+
+    
+                              <!DOCTYPE html>
+    <html>
+      <head>
+        <title>main</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+      </head>
+    <body> 
+      
+        <div class="container mx-auto bg-slate-300">
+        <h1 class="text-center text-lg font-bold mb-5">Lista de clientes</h1>
+        
+            <div class="mx-10 shadow-lg sm:rounded-lg bg-white"></div>
+            <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
+                <thead class="text-sm text-center text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Trámites</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+               
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-3 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                           1
+                        </th>
+                        <td class="px-6 py-4">Certificado de habilidad (Genérico)</td>
+    
+                        <td class="px-6 py-4">
+                            <a class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900" href="">Ver</a>                       
+                            <a class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" onclick="return alert('Are You sure?')" href="">Descargar</a>                       
+                        </td>
+                    </tr>
+    
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-3 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                           1
+                        </th>
+                        <td class="px-6 py-4">Certificado de habilidad (Genérico)</td>
+    
+                        <td class="px-6 py-4">
+                            <a class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900" href="">Ver</a>                       
+                            <a class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" onclick="return alert('Are You sure?')" href="">Descargar</a>                       
+                        </td>
+                    </tr>
+    
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-3 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                           1
+                        </th>
+                        <td class="px-6 py-4">Certificado de habilidad (Genérico)</td>
+    
+                        <td class="px-6 py-4">
+                            <a class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900" href="">Ver</a>                       
+                            <a class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" onclick="return alert('Are You sure?')" href="">Descargar</a>                       
+                        </td>
+                    </tr>
+               
+                </tbody>
+            </table>
+            
+        </div>
+    
+    </body>
+    </html> 
+                            <div class='max-w-md mx-auto my-24 space-y-6'>
+                                <img src='https://tramitesenlinea.org/wp-content/uploads/2020/06/logo-1.png' class='h-28' />
+                                <h1><b>Costos y requisitos</b></h1>
+                    
+                                <!-- Accordion start -->
+                                <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg shadow-gray-100 p-2">
+                    
+                                    <!-- Duplicate this <li> as often as you want -->
+                                    <li class="cursor-pointer my-1">
+                                        <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center">
+                                            <p>Certificado de habilidad (Genérico)</p>
+                                            <svg class="text-gray-500 mr-1"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                            </svg>
+                                        </span>
+                                        <div class="text-gray-500 text-md p-2">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                        </div>
+                                    </li>
+                    
+                                    <!-- Copy of above <li> -->
+                                    <li class="cursor-pointer my-1">
+                                        <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center">
+                                            <p>Certificado de habilidad (Específico)</p>
+                                            <svg class="text-gray-500 mr-1"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                            </svg>
+                                        </span>
+                                        <div class="text-gray-500 text-md p-2">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                        </div>
+                                    </li>
+                    
+                                </ul>
+                                <!-- Accordion end -->
+                    
+                        
+                                <a  @click="open=!open" class='block w-full px-4 py-2 font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-slate-700 rounded-md hover:bg-slate-900 focus:outline-none focus:ring focus:ring-slate-700 focus:ring-opacity-80'>
+                                    Haga click aqui si desea realizar algun trámite
+                                </a>
+                            </div>
+                            <%- include('../loooo/habigene'); %>
+                       
+    
+                           
+                        </div>
+                    </div>
+                    
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+                    <script>
+                        $(document).on('click', '.accordion li', function(e) {
+                            $(this).find('div').slideToggle();
+                            $(this).find('svg').toggleClass('flipY');
+                        });
+                    </script>
+
+
+                    <script>
+                        document.addEventListener('alpine:init', () => {
+                            Alpine.data('dropdown', () => ({
+                                open: false,
+                    
+                                toggle() {
+                                    this.open = ! this.open
+                                },
+                            }))
+                        })
+                    </script>   
+                    
+    
+        </div>
+
+        
+    
+        
+    
+    </div>
+</main>
+
+
+<%- include('../partials/footer'); %>

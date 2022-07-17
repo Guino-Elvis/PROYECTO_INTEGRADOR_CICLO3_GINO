@@ -1,637 +1,683 @@
-<style>
-  .notyy {
-        border: solid 2px black;
-        background: rgba(0, 0, 0, 0.179) ;
-        border-left: none;
-        border-right: none;
-        width: 500px;
-        
-        
-    }
 
-    .notyy:hover{
-        background:white;
-    }
+  <%- include('../partials/header'); %>
 
-    .contenidoo{
-         /* font-family: Arial, Helvetica, sans-serif;*/
-            background-image:url("images/montaña.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed; /*esto sirbe para que cunado
-                este en celular este igual tambien
-            /*background-size: 90%;
-            background-position: center; /* Center the image 
-            background-repeat: unset;*/
-            
-    }
-
-    </style>
-    
-    <%- include('../partials/header'); %>
-    <div class="relative md:ml-64 ">
-        <%- include('../partials/logout2'); %> 
-     
-         <!-- component -->
-         <div class="contenidoo flex items-center justify-center p-12" >
+  <%- include('../partials/logout3'); %> 
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>main</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="https://unpkg.com/alpinejs/dist/cdn.min.js" defer></script>
+    </head>
+    <style>
+      .notyy {
+            border: solid 2px black;
+            background: rgba(0, 0, 0, 0.179) ;
+            border-left: none;
+            border-right: none;
            
-            <div class="mx-auto w-full max-w-[600px]">
-                <div class=" flex justify-center text-blue-600 font-bold subpixel-antialiased text-2xl m-8  ">
-                    Inscripcion al evento 
+           
+            
+            
+        }
+    
+        .notyy:hover{
+            background:white;
+        }
+    
+        .contenidoo{
+             /* font-family: Arial, Helvetica, sans-serif;*/
+               background-image:url("images/montaña.jpg");
+              /* background: rgba(255, 0, 0, 0.167);*/
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed; /*esto sirbe para que cunado
+                    este en celular este igual tambien
+                /*background-size: 90%;
+                background-position: center; /* Center the image 
+                background-repeat: unset;*/
+                
+        }
+    
+        </style>
+<body>
+ <!--encabezadooo-->
+  <main x-data="{  open: false }">
+
+      <div class="relative md:ml-64 bg-blueGray-50">
+          <div class="relative bg-red-700 md:pt-11 pb-10 pt-10 mx-auto">
+              <h1 class="text-left pt-0 font-bold text-lg p-4 font-size:20vw text-white"><b>Notificaciones</b> </h1> 
+              <div class="flex items-center px-6 py-4 overflow-y-auto whitespace-nowrap">
+                <a href="#" class=" text-white dark:text-gray-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                  </svg>
+                    </a>
+                    <span class="mx-5  text-white dark:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    
+                    <a href="/main" class=" text-white dark:text-gray-200 hover:underline">
+                        Home
+                    </a>
+                  <span class="mx-5  text-white dark:text-gray-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                      </svg>
+                  </span>
+                <a href="#" class="text-slate-300 dark:text-slate-200 hover:underline hover:text-white">
+                Notificaciones
+                </a>
+            </div>
+
+            <!--esto es el contenidooo-->
+     <div class=' container inline-flex items-start justify-start min-h-screen p-10 ml-20px  from-slate-300 via-slate-400 to-slate-500 bg-gradient-to-br'>
+      <div class=' container overflow-auto w-full max-w-full px-10 py-8 mx-auto bg-white rounded-lg shadow-zinc-200'>
+       
+        <div class="contenidoo flex mt-8  "> 
+           <div class="otross mx-auto  ">
+            <!-- Modal toggle -->                  
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
                 </div>
-                       
-    
-    <!-- Modal toggle -->
-    <!-- component -->
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
                         
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
             </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-    
-    <!-- Modal toggle -->
-    <!-- component -->
-                        
-    <button class="" onclick="openModal('modal')">
-        <div class="notyy flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="default-checkbox" class=""><a
-                class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
-                href="#"
-                ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-                De:Secretaria</a
-              >
-              <h1> felizidades tu inscripcion fue validada</h1>
-            </label>
-        </div>
-    </button>
-    
-    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-    
-            <!-- Modal header -->
-            <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                <h3>Mensaje de Secretaria </h3>
-                <button onclick="closeModal('modal')">x</button>
-            </div>
-    
-            <!-- Modal body -->
-            <div class="max-h-48 overflow-y-scroll p-4">
-                <p>felicidades tu inscripcion</p>
-                <p>se aprobo con exito  </p>
-                <p>ahora ya puedes ingresar a tus clases </p>
-                
-            </div>
-    
-            <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-            </div>
-        </div>
-    </div>
-    
-    <script type="text/javascript">
-    window.openModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'block'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-    
-    window.closeModal = function(modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-    
-    // Close all modals when press ESC
-    document.onkeydown = function(event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    </script>
-    
-                                          
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            
+            <!-- Modal toggle -->
+            <!-- component -->
                                 
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
                 </div>
-            </div>  
-    <%- include('../partials/footer'); %>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+            
+            <!-- Modal toggle -->
+            <!-- component -->
+                                
+            <button class="" onclick="openModal('modal')">
+                <div class="notyy flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class=""><a
+                        class="text-blueGray-700 hover:text-red-600 text-xs uppercase py-3 font-bold block"
+                        href="#"
+                        ><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
+                        De:Secretaria</a
+                      >
+                      <h1> felizidades tu inscripcion fue validada</h1>
+                    </label>
+                </div>
+            </button>
+            
+            <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                        <h3>Mensaje de Secretaria </h3>
+                        <button onclick="closeModal('modal')">x</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="max-h-48 overflow-y-scroll p-4">
+                        <p>felicidades tu inscripcion</p>
+                        <p>se aprobo con exito  </p>
+                        <p>ahora ya puedes ingresar a tus clases </p>
+                        
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+            window.openModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'block'
+              document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+            
+            window.closeModal = function(modalId) {
+              document.getElementById(modalId).style.display = 'none'
+              document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+            
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+              event = event || window.event;
+              if (event.keyCode === 27) {
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                let modals = document.getElementsByClassName('modal');
+                Array.prototype.slice.call(modals).forEach(i => {
+                  i.style.display = 'none'
+                })
+              }
+            };
+            </script>
+            
+                    
+                </div>
+              </div>
+              <!--hasta aquii-->
+      </div>
+  </main>
+</body>
+</html>
+<%- include('../partials/footer'); %>
+
+
+
+
+
+
+
