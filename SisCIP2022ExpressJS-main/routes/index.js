@@ -138,4 +138,20 @@ router.get('/perfil', function(req, res, next) {
 }); 
 
 
+router.get('/ambientes', function(req, res, next) {
+  res.render('ambientes/amb');
+}); 
+
+router.get('/juniorr', function(req, res, next) {
+  res.render('junior/jun1');
+}); 
+
+
+/* GET home page.5*/ 
+router.get('/inicio', function(req, res, next) {
+  res.render('inicio/int');
+}); 
+
+
+
 module.exports = router;
