@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vista eventos </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <style>
+
+    .contenidoo{
+        
+        width:80%;
+        
+        margin:auto;
+        
+    }
+
+    .otross{
+      
+      width: 100%!important;
+      background: rgb(225, 211, 211);
+        padding-top: 15px ;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 35px;
+    }
+    .colorboton{
+            background:rgba(182, 7, 7, 0.72); 
+            border-radius: 8px!important;
+        }
+
+    </style>
+  <body>
+
+          <h1 class="text-center font-bold text-lg">LISTA DE CLIENTES ACTIVOS</h1>
+          <div class="container mx-40 shadow-md sm:rounded-lg">
+              <% if(data.length) { %>
+              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                          <th scope="col" class="px-6 py-3">
+                              #
+                          </th>
+                          <th scope="col" class="px-6 py-3">
+                              Nombre completo
+                          </th>
+                          <th scope="col" class="px-6 py-3">
+                            DNI
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                          telefono
+                      </th>
+                          <th scope="col" class="px-6 py-3">
+                              evento
+                          </th>
+                          <th scope="col" class="px-6 py-3">
+                              correo
+                          </th>
+                          <th scope="col" class="px-6 py-3">
+                           domicilio
+                        </th>
+                          <th scope="col" class="px-6 py-3">
+                              <span class="sr-only">Edit</span>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% for(var i = 0; i< data.length; i++) { %>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                              <%= (i+1) %>
+                          </th>
+                          <td class="px-6 py-4">
+                              <%= data[i].nombre %>
+                          </td>
+                          <td class="px-6 py-4">
+                              <%= data[i].dni %>
+                          </td>
+                          <td class="px-6 py-4">
+                              <%= data[i].telefono %>
+                          </td>
+                          <td class="px-6 py-4">
+                            <%= data[i].evento %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= data[i].correo %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= data[i].domicilio %>
+                        </td>
+                          <td class="px-6 py-4 text-right">
+                              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                          </td>
+                      </tr>
+                      <% } %>
+               
+                  </tbody>
+              </table>
+              <% } %>
+              <!-- if result is empty -->
+              <% if(!data.length) { %>
+                  <p class="text-center">No se encontraron registros</p>
+              <% } %>
+          </div>
+        </div>
+    </body>
+    </html>

@@ -1,3 +1,4 @@
+const { name } = require('ejs');
 var express = require('express');
 var router = express.Router();
 var dbConn  = require('../lib/db');
@@ -106,13 +107,13 @@ router.get('/clientes', function(req, res, next) {
 
 
 router.get('/vistaEventos', function(req, res, next) {
-  res.render('inscripcion/ins2');
+  res.render('inscripcion/inscripcion_vista');
 });
 
-
+/*
 router.get('/inscripcion', function(req, res, next) {
-  res.render('inscripcion/ins');
-}); 
+  res.render('inscripcion/inscripcion_formulario');
+}); */
 
 
 router.get('/ingresarclase', function(req, res, next) {
@@ -153,15 +154,43 @@ router.get('/inicio', function(req, res, next) {
 
 
 router.get('/tramites', function(req, res, next) {
-  res.render('loooo/tramiterel');
+  res.render('tramites/tramiterel');
 });
 
+router.get('/registrase', function(req, res, next) {
+  res.render('registro');
+});
+
+router.get('/certificado', function(req, res, next) {
+  res.render('vistacertificado');
+});
 
 
 
 /*
 router.get('/', function(req, res, next) {
-  res.render('perfil');
+  res.render('for');
 });*/
+
+router.get('/inscripcion', function(req, res, next) {
+  dbConn.query('SELECT * FROM inscripcion WHERE activo=1',function(err,rows)     {
+      if(err) {
+          req.flash('error', err);
+          // render to views/books/index.ejs
+          res.render('inscripcion/inscripcion_formulario',{data:''});   
+          console.log(rows);
+          console.log(rows);
+        
+      } else {
+          // render to views/books/index.ejs
+         
+          res.locals.idu=req.session.idu;
+          res.locals.user=req.session.user;
+          res.locals.email=req.session.email;
+
+          res.render('inscripcion/inscripcion_formulario',{data:rows});
+      }
+  });
+}); 
 
 module.exports = router;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vista eventos </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+      <style>
+          .datos{
+              background: red;
+          }
+         .letrasdos{
+             width: 400px;
+             height: 803px;
+             background: black;
+             color: white;
+             border: solid 3px yellow;
+             border-left: none ;
+         }
+         .imagen{
+            border: solid 3px yellow;
+            border-right: none ;
+         }
+         .boton{
+             justify-items: center;
+             color: white;
+             background: blue;
+             width: 40px;
+             padding: 10px;
+            border-radius: 10px;
+         }
+      </style>
+    <section class="Ambientes mt-5">    
+        <div class="md:flex justify-between">
+         <!--empiezaa-->
+            <div class="mx-4 mb-3 flex-1">
+                    <div class="mx-4 mb-3 flex-1 "> 
+                    <div class="datos">
+                        <div class="  flex items-center justify-center">
+                        <div class="letrass p-12 flex items-center ">
+                        <img class="imagen" src="images/certificado.webp"  width="600px" height="800px" alt="">
+                        <h1 class="letrasdos flex pl-10 flex items-center  "> 
+                            <p>  
+                            <a  href="download/acme-doc-2.0.1.txt" class="boton" download="Acme Documentation (ver. 2.0.1).txt">Download </a>
+                            </p>
+                        </h1>
+                        </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

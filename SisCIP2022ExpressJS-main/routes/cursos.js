@@ -14,20 +14,7 @@ router.post('/add', function(req, res, next) {
     let descripcion = req.body.descripcion;
     let tipo = req.body.tipo;
     let errors = false;
-/*
-    if(name.length === 0 || author.length === 0) {
-        errors = true;
 
-        // set flash message
-        req.flash('error', "Please enter name and author");
-        // render to add.ejs with flash message
-        res.render('books/add', {
-            name: name,
-            author: author
-        })
-    }
-*/
-    // if no error
     if(!errors) {
         var form_data = {
             titulo: titulo,

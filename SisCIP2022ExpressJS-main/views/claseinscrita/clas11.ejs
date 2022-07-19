@@ -38,7 +38,9 @@
                
             }
            
-              
+            .colorbot{
+                background: red;
+            } 
         
             
             </style>
@@ -75,28 +77,30 @@
         </a>
     </div>
 
-           <!-- component -->
+         
                     
                     <div class=' container inline-flex items-start justify-start min-h-screen p-10 ml-20px  from-slate-300 via-slate-400 to-slate-500 bg-gradient-to-br'>
                         <div class=' container overflow-auto w-full max-w-full px-10 py-8 mx-auto bg-white rounded-lg shadow-zinc-200'>
-      <div class="contenidoo flex  ">          
-        <div class="otross mx-auto ">      
-            <div class=" flex justify-center text-blue-600 font-bold subpixel-antialiased text-2xl m-8 ">                
-            </div>
+           
+                              <!-- component -->
+           
             <div class="boboo flex m-8 ">
                 <div class="flex-none w-auto h-auto mr-8">
                     <img src="images/n1.png" width="200px" height="400px" alt="">     
                 </div>
                 <div class="flex-initial w-64 ...">
-                  <p class=" pt-8 text-center ">  Docente<br>
-                    fisica cuantica<br>
-                    06/2/2022<br>
-                    </p>
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
                 </div>
                 <div class="botonnn flex-initial w-64 ...">                
                    <!-- component -->
                       <div class="colorboton pt-12 mb-8 ">
-                 <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
                  </div>
                   <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
                   <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
@@ -141,164 +145,46 @@
                                     </script> 
                                 </div>
                             </div>
-                            <div class="boboo flex m-8 ">
-                                <div class="flex-none w-auto h-auto mr-8">
-                                    <img src="images/n1.png" width="200px" height="400px" alt="">
-                                    
-                                </div>
-                                <div class="flex-initial w-64 ...">
-                                <p class="pt-8 text-center">  Docente<br>
-                                    fisica cuantica<br>
-                                    06/2/2022<br>
-                                    </p>
-                                </div>
-                                <div class="botonnn flex-initial w-64 ...">
-                  
-                                    <!-- component -->
-                                        <div class="colorboton pt-12 mb-8">
-                                        <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
-                                        </div>
-                                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-                                        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-            
-                                            <!-- Modal header -->
-                                            
-            
-                                            <!-- Modal body -->
-                                            <div class="flex items-center justify-center">
-                                               <img  src="images/zoom.png" width="300px" height="400px" alt="">
-                                            </div>
-            
-                                            <!-- Modal footer -->
-                                            <div class="px-4 py-2  flex justify-center items-center space-x-4">
-                                                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
-                                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <script type="text/javascript">
-                                    window.openModal = function(modalId) {
-                                    document.getElementById(modalId).style.display = 'block'
-                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-                                    }
-            
-                                    window.closeModal = function(modalId) {
-                                    document.getElementById(modalId).style.display = 'none'
-                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-                                    }
-            
-                                    // Close all modals when press ESC
-                                    document.onkeydown = function(event) {
-                                    event = event || window.event;
-                                    if (event.keyCode === 27) {
-                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-                                        let modals = document.getElementsByClassName('modal');
-                                        Array.prototype.slice.call(modals).forEach(i => {
-                                        i.style.display = 'none'
-                                        })
-                                    }
-                                    };
-                                    </script> 
-                            </div>
-                        </div>
-              <div class="boboo flex m-8 ">
-                <div class="flex-none w-auto h-auto mr-8">
-                    <img src="images/n1.png" width="200px" height="400px" alt=""> 
-                </div>
-                <div class="flex-initial w-64 ...">
-                  <p class="pt-8 text-center">  Docente<br>
-                    fisica cuantica<br>
-                    06/2/2022<br>
-                    </p>
-                </div>
-                <div class="botonnn flex-initial w-64 ...">
-                <!-- component -->
-                            <div class="colorboton pt-12 mb-8 ">
-                                        <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
-                                        </div>
-                                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-                                        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
-            
-                                            <!-- Modal header -->
-                                            
-            
-                                            <!-- Modal body -->
-                                            <div class="flex items-center justify-center">
-                                               <img  src="images/zoom.png" width="300px" height="400px" alt="">
-                                            </div>
-            
-                                            <!-- Modal footer -->
-                                            <div class="px-4 py-2  flex justify-center items-center space-x-4">
-                                                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
-                                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <script type="text/javascript">
-                                    window.openModal = function(modalId) {
-                                    document.getElementById(modalId).style.display = 'block'
-                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-                                    }
-            
-                                    window.closeModal = function(modalId) {
-                                    document.getElementById(modalId).style.display = 'none'
-                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-                                    }
-            
-                                    // Close all modals when press ESC
-                                    document.onkeydown = function(event) {
-                                    event = event || window.event;
-                                    if (event.keyCode === 27) {
-                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-                                        let modals = document.getElementsByClassName('modal');
-                                        Array.prototype.slice.call(modals).forEach(i => {
-                                        i.style.display = 'none'
-                                        })
-                                    }
-                                    };
-                                    </script> 
-                </div>
-              </div>
-              
 
-              <div class="boboo flex m-8 ">
+                            <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
                 <div class="flex-none w-auto h-auto mr-8">
-                    <img src="images/n1.png" width="200px" height="400px" alt="">
-                    
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
                 </div>
                 <div class="flex-initial w-64 ...">
-                  <p class="pt-8 text-center">  Docente<br>
-                    fisica cuantica<br>
-                    06/2/2022<br>
-                    </p>
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
                 </div>
-                <div class="botonnn flex-initial w-64 ...">
-                  
-                                    <!-- component -->
-                                        <div class="colorboton pt-12 mb-8">
-                                        <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
-                                        </div>
-                                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-                                        <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
             
-                                            <!-- Modal header -->
+                    <!-- Modal header -->
                                             
             
-                                            <!-- Modal body -->
-                                            <div class="flex items-center justify-center">
-                                               <img  src="images/n1.png" width="300px" height="400px" alt="">
-                                            </div>
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
             
-                                            <!-- Modal footer -->
-                                            <div class="px-4 py-2  flex justify-center items-center space-x-4">
-                                                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
-                                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
-                                            </div>
-                                        </div>
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
                                     </div>
-            
                                     <script type="text/javascript">
                                     window.openModal = function(modalId) {
                                     document.getElementById(modalId).style.display = 'block'
@@ -322,8 +208,334 @@
                                     }
                                     };
                                     </script> 
+                                </div>
+                            </div>
+
+                        <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
+                <div class="flex-none w-auto h-auto mr-8">
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
                 </div>
-              </div>
+                <div class="flex-initial w-64 ...">
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
+                </div>
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                                            
+            
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
+            
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    window.openModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'block'
+                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                                    }
+            
+                                    window.closeModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'none'
+                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                    }
+            
+                                    // Close all modals when press ESC
+                                    document.onkeydown = function(event) {
+                                    event = event || window.event;
+                                    if (event.keyCode === 27) {
+                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                        let modals = document.getElementsByClassName('modal');
+                                        Array.prototype.slice.call(modals).forEach(i => {
+                                        i.style.display = 'none'
+                                        })
+                                    }
+                                    };
+                                    </script> 
+                                </div>
+                            </div>
+
+                             <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
+                <div class="flex-none w-auto h-auto mr-8">
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
+                </div>
+                <div class="flex-initial w-64 ...">
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
+                </div>
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                                            
+            
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
+            
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    window.openModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'block'
+                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                                    }
+            
+                                    window.closeModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'none'
+                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                    }
+            
+                                    // Close all modals when press ESC
+                                    document.onkeydown = function(event) {
+                                    event = event || window.event;
+                                    if (event.keyCode === 27) {
+                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                        let modals = document.getElementsByClassName('modal');
+                                        Array.prototype.slice.call(modals).forEach(i => {
+                                        i.style.display = 'none'
+                                        })
+                                    }
+                                    };
+                                    </script> 
+                                </div>
+                            </div>
+                        
+                             <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
+                <div class="flex-none w-auto h-auto mr-8">
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
+                </div>
+                <div class="flex-initial w-64 ...">
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
+                </div>
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                                            
+            
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
+            
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    window.openModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'block'
+                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                                    }
+            
+                                    window.closeModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'none'
+                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                    }
+            
+                                    // Close all modals when press ESC
+                                    document.onkeydown = function(event) {
+                                    event = event || window.event;
+                                    if (event.keyCode === 27) {
+                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                        let modals = document.getElementsByClassName('modal');
+                                        Array.prototype.slice.call(modals).forEach(i => {
+                                        i.style.display = 'none'
+                                        })
+                                    }
+                                    };
+                                    </script> 
+                                </div>
+                            </div>
+
+
+                             <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
+                <div class="flex-none w-auto h-auto mr-8">
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
+                </div>
+                <div class="flex-initial w-64 ...">
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
+                </div>
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                                            
+            
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
+            
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    window.openModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'block'
+                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                                    }
+            
+                                    window.closeModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'none'
+                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                    }
+            
+                                    // Close all modals when press ESC
+                                    document.onkeydown = function(event) {
+                                    event = event || window.event;
+                                    if (event.keyCode === 27) {
+                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                        let modals = document.getElementsByClassName('modal');
+                                        Array.prototype.slice.call(modals).forEach(i => {
+                                        i.style.display = 'none'
+                                        })
+                                    }
+                                    };
+                                    </script> 
+                                </div>
+                            </div>
+
+                             <!--otross-->
+
+                           
+            <div class="boboo flex m-8 ">
+                <div class="flex-none w-auto h-auto mr-8">
+                    <img src="images/n1.png" width="200px" height="400px" alt="">     
+                </div>
+                <div class="flex-initial w-64 ...">
+                  <div class="  items-center justify-center ">
+                    <p class="font-semibold text-[#07074D]">Docente: Jose Peralta</p>
+                    <p class="font-semibold text-[#07074D]">horas: 2h</p>
+                    <p class="font-semibold text-[#07074D]">Inicio: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">fin: 02/10/22</p>
+                    <p class="font-semibold text-[#07074D]">nota: no se olvide de la asistencia</p>
+                  </div>
+                </div>
+                <div class="botonnn flex-initial w-64 ...">                
+                   <!-- component -->
+                      <div class="colorboton pt-12 mb-8 ">
+                 <button class="colorbot text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Ingresar </button>
+                 </div>
+                  <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                  <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+            
+                    <!-- Modal header -->
+                                            
+            
+                <!-- Modal body -->
+                     <div class="flex items-center justify-center">
+                          <img  src="images/zoom.png" width="300px" height="400px" alt="">
+                                </div>
+            
+                                    <!-- Modal footer -->
+                                     <div class="px-4 py-2  flex justify-center items-center space-x-4">
+                                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Ingresar</a>
+                                 <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Cerrar</button>
+                                </div>
+                             </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    window.openModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'block'
+                                    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                                    }
+            
+                                    window.closeModal = function(modalId) {
+                                    document.getElementById(modalId).style.display = 'none'
+                                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                    }
+            
+                                    // Close all modals when press ESC
+                                    document.onkeydown = function(event) {
+                                    event = event || window.event;
+                                    if (event.keyCode === 27) {
+                                        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                                        let modals = document.getElementsByClassName('modal');
+                                        Array.prototype.slice.call(modals).forEach(i => {
+                                        i.style.display = 'none'
+                                        })
+                                    }
+                                    };
+                                    </script> 
+                                </div>
+                            </div>
 
 
         
